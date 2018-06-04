@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <t t-name="threecx.PhoneTrayMenu">
+        <li class="o_mail_navbar_item">
+            <a class="the_phone_icon" aria-expanded="false" title="3CX Phone" href="#">
+                <i class="fa fa-phone fa-fw" aria-hidden="true"></i>
+                <div class="tcx_tray_warn_icon">
+                    <img src="/threecx/static/img/warn.png"/>
+                </div>
+            </a>
+            <!--<ul class="o_mail_navbar_dropdown dropdown-menu phone" role="menu">-->
+                <!--<li class="o_mail_navbar_dropdown_top">-->
+                    <!--<div>-->
+                        <!--<button class="btn btn-sm o_filter_button active" type="button"> Thống báo gần đây </button>-->
+                    <!--</div>-->
+                    <!--<button class="btn btn-sm o_unnew_noti o_new_message" type="button"> Đánh dấu là đã đọc </button>-->
+                <!--</li>-->
+                <!--<li class="o_mail_navbar_dropdown_channels">-->
+                    <!--&lt;!&ndash;<a href="#" class="nd_test">Click to test</a>&ndash;&gt;-->
+                <!--</li>-->
+            <!--</ul>-->
+        </li>
+    </t>
+
+    <t t-name="threecx.MainView">
+        <div class="tcx_main_view">
+            <div class="tcx_dial_fold text-right">
+                <span>
+                    <i class="tcx_dial_window_minimize fa fa-chevron-down"></i>
+                </span>
+                <span>
+                    <a class="tcx_dial_window_close fa fa-close" href="#" style="display: inline-block;"></a>
+                </span>
+            </div>
+
+            <div class="tcx_connection_lost_screen">
+                <div class="text-center">
+                    <img class="tcx_disconnected_icon" src="/threecx/static/img/disconnected.png"/>
+                    <p class="title">
+                        Connection lost
+                    </p>
+                    <p>
+                        Connection to Phone client lost. Please make sure that 3CX Phone client is running and
+                        <strong>refresh this page</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tcx_disconnected_screen">
+                <div class="text-center">
+                    <img class="tcx_disconnected_icon" src="/threecx/static/img/disconnected.png"/>
+                    <p class="title">Could not connect to <br/> 3CX phone client</p>
+                    <p>
+                        Phone on Odoo needs to connect to
+                        <a href="https://www.3cx.com/phone-system/3cxphone/" target="new">
+                            3CX phone client for Windows (soft phone)
+                        </a>
+                        <br/>
+                        Please make sure that you have 3CX phone client running on this computer
+                        and its NodoCRMPlugin is loaded then reload this page.
+                        <a href="#">Learn more</a>
+                    </p>
+
+                    <!--<button class=".tcx_button_reload">Reload</button>-->
+                </div>
+            </div>
+            <div class="screen in_call">
+                <div class="text-center">
+                    <div class="phonering-alo-phone phonering-alo-green phonering-alo-show"
+                         id="phonering-alo-phoneIcon">
+                        <div class="phonering-alo-ph-circle"></div>
+                        <div class="phonering-alo-ph-circle-fill"></div>
+                        <a href="#" class="pps-btn-img" title="Contact">
+                            <div class="phonering-alo-ph-img-circle"></div>
+                        </a>
+                    </div>
+                    <img class="tcx_avatar"
+                         src="http://threecx.odoo-dev.vn:8069/web/image?model=res.partner&amp;id=24&amp;field=image_medium"/>
+                </div>
+                <div class="text-center">
+                    <p class="tcx_call_direction"></p>
+                    <p class="tcx_partner_name">Unknown caller</p>
+                    <p class="tcx_caller_number">+00 0123 456 789</p>
+                </div>
+                <div class="text-center">
+                    <p class="tcx_call_duration">00:00:00</p>
+                </div>
+                <div class="text-center">
+                    <div class="tcx_button_answer tcx_answer_reject_common">Answer</div>
+                    <div class="tcx_button_decline tcx_answer_reject_common">Decline</div>
+                </div>
+
+                <div class="text-center tcx_mute_hold">
+                    <div class="tcx_hold_button tcx_mute_hold_common">
+                        <i class="fa fa-pause-circle"></i>
+                        <p>Hold</p>
+                    </div>
+                    <div class="tcx_mute_button tcx_mute_hold_common">
+                        <i class="fa fa-microphone-slash"></i>
+                        <p>Mute</p>
+                    </div>
+                </div>
+
+                <div class="text-center tcx_button_view_partner_info">
+                    <i class="tcx_partner_icon fa fa-user"></i>
+                    <div class="tcx_partner_info_text">Partner info</div>
+                </div>
+                <div class="text-center">
+                    <div class="tcx_button_end_call">END</div>
+                </div>
+            </div>
+
+            <div class="screen dial_pad">
+                <div class="text-center">
+                    <div class="tcx_now_number_container">
+                        <input type="text" class="tcx_now_number"/>
+                        <span>
+                            <img class="tcx_backspace" src="/threecx/static/img/backspace.png"/>
+                        </span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <table class="tcx_num_pad_table">
+                        <tr>
+                            <td class="tcx_num_cell">1</td>
+                            <td class="tcx_num_cell">2</td>
+                            <td class="tcx_num_cell">3</td>
+                        </tr>
+                        <tr>
+                            <td class="tcx_num_cell">4</td>
+                            <td class="tcx_num_cell">5</td>
+                            <td class="tcx_num_cell">6</td>
+                        </tr>
+                        <tr>
+                            <td class="tcx_num_cell">7</td>
+                            <td class="tcx_num_cell">8</td>
+                            <td class="tcx_num_cell">9</td>
+                        </tr>
+                        <tr>
+                            <td class="tcx_num_cell">*</td>
+                            <td class="tcx_num_cell">0</td>
+                            <td class="tcx_num_cell">#</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="text-center">
+                    <div class="tcx_make_call_button">CALL</div>
+                </div>
+            </div>
+
+        </div>
+    </t>
+</odoo>

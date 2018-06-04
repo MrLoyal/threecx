@@ -1,0 +1,70 @@
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Connect Odoo client and 3CX</h2>
+        <!--<div class="text-center oe_mt32">-->
+            <!--<img class="oe_picture oe_screenshot" src="screenshot01.png"/>-->
+        <!--</div>-->
+        <!--<h3 class="oe_slogan">Demo</h3>-->
+
+        <div class="row">
+            <h4 style="text-align: center;">
+			<span> <a href="https://www.youtube.com/watch?v=DDu9wL7YMXs" target="_blank"
+                      class="btn btn-sm btn btn-primary" style="position: relative; overflow: hidden;"><span
+                    class="o_ripple" style="height: 240px; width: 240px; top: -110px; left: -61.5px;"></span><i
+                    class="fa fa-youtube-play"></i> Click here for the demo video</a>
+		</span></h4>
+        </div>
+        <div class="text-center oe_mt32">
+            <!--<video width="70%" height="70%" controls>-->
+            <!--<source src="https://www.odoo.com/openerp_website/static/src/video/wbuilder/Editing.mp4"-->
+            <!--type="video/mp4">-->
+            <!--Your browser does not support the video tag.-->
+            <!--</video>-->
+        </div>
+
+        <h2 class="oe_slogan" style="color:#875A7B;">Prerequisites</h2>
+        <p>1. End user must use a computer running Windows. This module does not support other platforms.</p>
+        <p>2. 3CXPhone for Windows (soft phone)is installed and working.</p>
+        <p>3. An user must use Odoo and 3CX soft phone in the same computer.</p>
+        <p>4. PRO license of 3CX phone system. Free trial license does NOT work.
+            <a href="https://www.3cx.com/community/threads/is-a-pro-license-required-for-development-with-3cx-windowsphone-api.55598/">
+                Learn more
+            </a>
+        </p>
+
+
+        <h2 class="oe_slogan" style="color:#875A7B;">How to install</h2>
+        There are 2 folders in this git repository: threecx and NodoCRMPlugin. <br>
+        <ul>
+            <li>threecx is an Odoo module.</li>
+            <li>NodoCRMPlugin is a plugin for '3CX Phone for Windows'.</li>
+        </ul>
+
+        <h4>Installation steps:</h4>
+        <p>1. Install threecx for Odoo. This should be straight forward.</p>
+        <p>2. Copy NodoCRMPlugin/NodoCRMPlugin.dll into 3CX Phone for Windows installation folder. Typically, it is:
+        <pre>C:\ProgramData\3CXPhone for Windows\PhoneApp</pre></p>
+        <p>3. Still in the above PhoneApp folder, open '3CXWin8Phone.user.config', add <code>NodoCRMPlugin</code> into
+        value of the line 'CRMPlugin'. Full content of this file should be like this:</p>
+        <pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;appSettings&gt;
+  &lt;add key="version" value="3.0.0" /&gt;
+  &lt;add key="ClientSettingsProvider.ServiceUri" value="" /&gt;
+  &lt;add key="<code style="color: red;">CRMPlugin</code>" value="CallTriggerCmdPlugin,DotNetScriptPlugin,<code style="color: red;">NodoCRMPlugin</code>" /&gt;
+  &lt;add key="MakeCallTimeout" value="10000" /&gt;
+  &lt;add key="MakeCallTimeoutCTIUnsupported" value="200000" /&gt;
+  &lt;add key="EnableVCELogging" value="true" /&gt;
+  &lt;add key="MaxLogFileSizeMb" value="5" /&gt;
+  &lt;add key="RequestTimeout" value="60" /&gt;
+  &lt;add key="MaxUploadSizeKb" value="2048" /&gt;
+&lt;/appSettings&gt;</pre>
+
+        <p>4. Restart 3CX Phone for Windows and refresh Odoo web page. Odoo client now should be connected to 3CX soft phone.</p>
+
+        <h2 class="oe_slogan" style="color:#875A7B;">Status of this project and WARNING</h2>
+        <p>Please be aware that this project is in development progress and it is incomplete.
+            Some basic features work but there are some still don't.
+        </p>
+        <h4>Contributions are welcome!</h4>
+    </div>
+</section>

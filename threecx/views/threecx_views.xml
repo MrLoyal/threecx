@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem name="3CX VoIP" parent="crm.crm_menu_root" sequence="2" id="threecx.menu_voip"/>
+        <menuitem id="threecx.menu_call_log" name="Call logs" parent="threecx.menu_voip" action="threecx.call_log_act"/>
+    </data>
+</odoo>

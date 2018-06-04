@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VoIP Test</title>
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+	<textarea id="txt" rows="12" cols="100"></textarea>
+
+	<button id="call_btn">Call</button>
+
+	<script type="text/javascript">
+		var ws = new WebSocket("ws://localhost:6789/voip");
+		ws.onopen = function(){
+			console.log("Opened");
+		}
+		ws.onmessage = function(e){
+			console.log("Message: ", e);
+
+			if (typeof e.data == 'object') {
+				var reader = new FileReader();
+				reader.onload = function() {
+				    console.log("Reader result: " + reader.result);
+				    $("#txt").append("\nServer: " + reader.result);
+				}
+				reader.readAsText(e.data);
+				
+			} else {
+				console.log("Type: " + typeof e.data);
+			}
+			
+		}
+
+		$("#call_btn").click(function(){
+			console.log("Clicked");
+			ws.send("");
+		});
+	</script>
+
+</body>
+</html>

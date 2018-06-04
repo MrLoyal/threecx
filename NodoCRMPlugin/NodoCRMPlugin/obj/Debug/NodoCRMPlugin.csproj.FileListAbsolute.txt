@@ -1,0 +1,15 @@
+c:\users\mrloyal\documents\visual studio 2015\Projects\NodoCRMPlugin\NodoCRMPlugin\bin\Debug\NodoCRMPlugin.dll
+c:\users\mrloyal\documents\visual studio 2015\Projects\NodoCRMPlugin\NodoCRMPlugin\bin\Debug\NodoCRMPlugin.pdb
+c:\users\mrloyal\documents\visual studio 2015\Projects\NodoCRMPlugin\NodoCRMPlugin\bin\Debug\MyPhoneCRMIntegration.dll
+c:\users\mrloyal\documents\visual studio 2015\Projects\NodoCRMPlugin\NodoCRMPlugin\obj\Debug\NodoCRMPlugin.csprojResolveAssemblyReference.cache
+c:\users\mrloyal\documents\visual studio 2015\Projects\NodoCRMPlugin\NodoCRMPlugin\obj\Debug\NodoCRMPlugin.dll
+c:\users\mrloyal\documents\visual studio 2015\Projects\NodoCRMPlugin\NodoCRMPlugin\obj\Debug\NodoCRMPlugin.pdb
+C:\Users\MrLoyal\Documents\Visual Studio 2015\Projects\NodoCRMPlugin\NodoCRMPlugin\obj\Debug\NodoCRMPlugin.csproj.CoreCompileInputs.cache
+C:\Users\MrLoyal\Documents\Visual Studio 2015\Projects\NodoCRMPlugin\NodoCRMPlugin\obj\Debug\NodoCRMPlugin.csproj.CopyComplete
+I:\ProgramData\3CXPhone for Windows\PhoneApp\NodoCRMPlugin.dll
+I:\ProgramData\3CXPhone for Windows\PhoneApp\NodoCRMPlugin.pdb
+C:\ProgramData\3CXPhone for Windows\PhoneApp\NodoCRMPlugin.dll
+C:\ProgramData\3CXPhone for Windows\PhoneApp\NodoCRMPlugin.pdb
+I:\projects\Odoo\NodoCRMPlugin\NodoCRMPlugin\obj\Debug\NodoCRMPlugin.dll
+I:\projects\Odoo\NodoCRMPlugin\NodoCRMPlugin\obj\Debug\NodoCRMPlugin.pdb
+I:\projects\Odoo\NodoCRMPlugin\NodoCRMPlugin\obj\Debug\NodoCRMPlugin.csprojResolveAssemblyReference.cache

@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="threecx.list">
+      <field name="name">threecx list</field>
+      <field name="model">threecx.threecx</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="threecx.action_window">
+      <field name="name">threecx window</field>
+      <field name="res_model">threecx.threecx</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="threecx.action_server">
+      <field name="name">threecx server</field>
+      <field name="model_id" ref="model_threecx_threecx"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="threecx" id="threecx.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="threecx.menu_1" parent="threecx.menu_root"/>
+    <menuitem name="Menu 2" id="threecx.menu_2" parent="threecx.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="threecx.menu_1_list" parent="threecx.menu_1"
+              action="threecx.action_window"/>
+    <menuitem name="Server to list" id="threecx" parent="threecx.menu_2"
+              action="threecx.action_server"/>
+    -->
+  </data>
+</odoo>
